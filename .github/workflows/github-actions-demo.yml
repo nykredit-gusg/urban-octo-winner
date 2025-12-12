@@ -13,7 +13,8 @@ jobs:
     steps:
       - run: echo "Job triggered by event ${{ github.event_name }} on branch ${{ github.ref }}"
       
-      - uses: actions/checkout@v3.3.0
+      - name: Checkout
+        uses: actions/checkout@v6.0.1
       
       - name: List repository files
         run: |
